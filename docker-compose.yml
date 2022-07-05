@@ -1,13 +1,13 @@
 version: '3.7'
 services:
-  mysql:
-    image: mysql:latest
+  postgresql:
+    image: roko1384/12-alpine:latest
     ports:
     - '3306:3306'
     volumes:
-    - ./data:/var/lib/mysql
+    - ./data:/var/lib/roko1384/12-alpine
     environment:
-    - MYSQL_RANDOM_ROOT_PASSWORD=yes
-    - MYSQL_DATABASE=app
-    - MYSQL_USER=app
-    - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
+    - roko1384/12-alpine_RANDOM_ROOT_PASSWORD=yes
+    - roko1384/12-alpine_DATABASE=app
+    - roko1384/12-alpine_USER=app
+    - roko1384/12-alpine_PASSWORD=9mREsvXDs9Gk89Ef
