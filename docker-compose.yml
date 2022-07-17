@@ -1,13 +1,13 @@
 version: '3.7'
 services:
   postgresql:
-    image: roko1384/12-alpine:latest
+    image: postgres:12-alpine
     ports:
-    - '3306:3306'
+    - '5432:5432'
     volumes:
-    - ./data:/var/lib/roko1384/12-alpine
+    - ./data:/var/lib/postgresql
     environment:
-    - roko1384/12-alpine_RANDOM_ROOT_PASSWORD=yes
-    - roko1384/12-alpine_DATABASE=app
-    - roko1384/12-alpine_USER=app
-    - roko1384/12-alpine_PASSWORD=9mREsvXDs9Gk89Ef
+    - POSTGRES_RANDOM_ROOT_PASSWORD=yes
+    - POSTGRES_DATABASE=app
+    - POSTGRES_USER=app
+    - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
